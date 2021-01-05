@@ -38,6 +38,7 @@ public class CodegenApplication {
 //        gc.setAuthor("Max");
         gc.setSwagger2(true); //实体属性 Swagger2 注解
 
+        gc.setServiceName("%sService");
         mpg.setGlobalConfig(gc);
 
         Props props = new Props("application.properties");
