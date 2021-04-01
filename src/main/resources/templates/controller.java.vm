@@ -12,6 +12,9 @@ import org.springframework.stereotype.Controller;
 import ${superControllerClassPackage};
 #end
 
+#if(${swagger2})
+@Api(tags = "$!{table.comment}")
+#end
 #if(${restControllerStyle})
 @RestController
 #else

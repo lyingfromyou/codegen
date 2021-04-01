@@ -35,7 +35,6 @@ public class CodegenApplication {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/src/main/java");
-//        gc.setAuthor("Max");
         gc.setSwagger2(true); //实体属性 Swagger2 注解
 
         gc.setServiceName("%sService");
@@ -99,7 +98,7 @@ public class CodegenApplication {
         if (StrUtil.isNotBlank(includeTables)) {
             strategy.setInclude(StrUtil.splitTrim(includeTables, StrUtil.COMMA).toArray(new String[]{}));
         }
-        strategy.setControllerMappingHyphenStyle(true);
+        strategy.setControllerMappingHyphenStyle(false);
         mpg.setStrategy(strategy);
         mpg.execute();
     }
